@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import pino from "pino-http";
+// import pino from "pino-http";
 
 import moviesRouter from "./routers/movies-router.js";
 
@@ -14,11 +14,11 @@ const port = env("PORT", "3000");
 const startServer = () => {
     const app = express();
 
-    const logger = pino({
-        transport: {
-            target: "pino-pretty"
-        }
-    });
+    // const logger = pino({
+    //     transport: {
+    //         target: "pino-pretty"
+    //     }
+    // });
 
     // app.use(logger);
     app.use(cors());
